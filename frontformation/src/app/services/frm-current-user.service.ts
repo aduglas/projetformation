@@ -9,7 +9,7 @@ export class FrmCurrentUserService {
 
   constructor() { }
 
-  public set LogToken(v : string) {
+  public set logToken(v : string) {
     this.token = v;
   }
   
@@ -21,6 +21,10 @@ export class FrmCurrentUserService {
     }
     
     return false;
+  }
+
+  public reset(){
+    this.token = "";
   }
 
 

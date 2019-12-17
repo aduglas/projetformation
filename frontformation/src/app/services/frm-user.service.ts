@@ -34,7 +34,7 @@ export class FrmUserService {
                                              tap(
                                               (data : FrmReponseToken) =>{
                                                 // recuperation du token
-                                                this.currentUser.LogToken = data.token;
+                                                this.currentUser.logToken = data.token;
                                               } 
                                              )
                                           );

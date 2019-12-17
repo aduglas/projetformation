@@ -1,7 +1,15 @@
 
-<button (click)="onClickTest()">Send Back</button>
+<!---
+<div *ngIf="!currentUser.isLogged">
+    <button (click)="onClickTest()">log on</button>    
+</div>
+   
+<div *ngIf="currentUser.isLogged"> Log OK    
+    <button (click)="onClickClose()">log off</button>
+</div>
+-->
+
+<button  [ngClass]="stateClass"   (click)="onClickLog()">{{ btName }}</button>
+
 <button (click)="onClickOpen()">Open Modal</button>
-
-<div *ngIf="currentUser.isLogged"> Log OK </div>
-
 <router-outlet></router-outlet>

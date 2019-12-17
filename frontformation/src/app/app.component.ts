@@ -21,8 +21,40 @@ export class AppComponent {
               private modalService: BsModalService){}
 
 
+  
+  public get btName() : string {
+    if (this.currentUser.isLogged){
+      return "LOG OFF";
+    }else{
+      return "LOG ON";
+    }
+
+  }
+    
+  
+  public get stateClass() : any {
+    return {
+      logoff: this.currentUser.isLogged,
+      logon : !this.currentUser.isLogged
+    }
+  }
+  
+
+  onClickLog(){
+    if (this.currentUser.isLogged){
+      this.currentUser.reset();
+    }else{
+      this.onClickTest();
+    }
+  }
+
+
   onClickOpen(){
     this.bsModalRef = this.modalService.show(FrmModalLoggingComponent, {initialState : { message: "test 222222" }});
+  }
+
+  onClickClose(){
+    this.currentUser.reset();
   }
 
   onClickTest(){
