@@ -8,19 +8,22 @@ import { ModalModule } from 'ngx-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FrmModalLoggingComponent } from './frm-mocal-logging/frm-mocal-logging.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PocFormulaireComponent } from './poc-formulaire/poc-formulaire.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FrmModalLoggingComponent
+    FrmModalLoggingComponent,
+    PocFormulaireComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     // bootstarp
     ModalModule.forRoot()
   ],

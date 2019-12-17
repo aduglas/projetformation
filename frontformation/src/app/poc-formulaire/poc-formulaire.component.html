@@ -1,0 +1,11 @@
+<form  (ngSubmit)="onGestionValidation()"  [formGroup]="leFormulaire">
+
+    <input formControlName="inpUn"/>
+    <input formControlName="inpDeux"/>
+
+    <!--
+    <button [hidden]="!leFormulaire.valid">Validation</button>
+    -->
+    <button >Validation</button>
+
+</form>
