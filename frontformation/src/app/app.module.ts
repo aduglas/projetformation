@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { FrmModalLoggingComponent } from './frm-mocal-logging/frm-mocal-logging.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PocFormulaireComponent } from './poc-formulaire/poc-formulaire.component';
+import { FormBlaBlaComponent } from './form-bla-bla/form-bla-bla.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FrmModalLoggingComponent,
-    PocFormulaireComponent
+    PocFormulaireComponent,
+    FormBlaBlaComponent
   ],
   imports: [
     BrowserModule,
