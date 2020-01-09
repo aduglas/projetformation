@@ -22,7 +22,7 @@ public async  distinct(
   colName: string,
   filter?: Filter<BlaBla>
 ): Promise<any> {
-  this.find(filter);
+
 
   const retTab: BlaBla[] = await this.find(filter);
   const tabOut: any[] = [];
