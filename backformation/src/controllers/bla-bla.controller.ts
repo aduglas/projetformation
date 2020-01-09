@@ -171,4 +171,15 @@ export class BlaBlaController {
   async deleteById(@param.path.number('id') id: number): Promise<void> {
     await this.blaBlaRepository.deleteById(id);
   }
+
+
+// test
+@get("/bla-blas/testdistinct/{colName}")
+async testDistinc(@param.path.string('colName') colName: string,
+  @param.query.object('filter', getFilterSchemaFor(BlaBla)) filter?: Filter<BlaBla>): Promise<any[]> {
+
+  return this.blaBlaRepository.distinct(colName , filter);
+}
+
+
 }
