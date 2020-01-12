@@ -1,16 +1,14 @@
-import {BackformationApplication} from './application';
-import {ApplicationConfig} from '@loopback/core';
+import { BackformationApplication } from './application';
+import { ApplicationConfig } from '@loopback/core';
+import { ExpressServer } from './server';
 
-export {BackformationApplication};
+export { BackformationApplication };
 
 export async function main(options: ApplicationConfig = {}) {
-  const app = new BackformationApplication(options);
-  await app.boot();
-  await app.start();
+  
+  const server = new ExpressServer(options);
+  await server.boot();
+  await server.start();
+  console.log('Server is running at http://127.0.0.1:3000');
 
-  const url = app.restServer.url;
-  console.log(`Server is running at ${url}`);
-  console.log(`Try ${url}/ping`);
-
-  return app;
 }
