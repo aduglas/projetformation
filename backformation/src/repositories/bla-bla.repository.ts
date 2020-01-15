@@ -37,6 +37,31 @@ public async  distinct(
   return tabOut;
 }
 
+// recherche FTS avec query native mongodb
+public async fullText(str: string) : Promise<any>{
+
+  const tabRet : any[] = [];
+
+    return new Promise((resolve, reject) => {
+      
+      this.dataSource.connector!.execute!('BlaBla', 'find', { $text: { $search: str } },
+      (err : any, data : any) => {
+        if (err) reject(err);
+        else {
+          data.toArray((errT : any, documents : any)=> {
+            if (errT){
+              reject(errT);
+              return;
+            }
+            resolve(documents);
+          });
+        }
+      });
+    });
+
+
+}
+
 
 
 }
