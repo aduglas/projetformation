@@ -59,7 +59,7 @@
     "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "@loopback/build": "^3.0.0",
+    "@loopback/build": "^9.0.6",
     "@loopback/eslint-config": "^5.0.0",
     "@loopback/testlab": "^1.10.0",
     "@types/node": "^10.17.6",
